@@ -1,9 +1,9 @@
 <h1>show</h1>
 
-   <% if @todo.completed == true  %>
-   <% a= "completado"%>
-    <% else %>
-    <% a= "no completado"%>
+  <% if @todo.completed == true  %>
+       <% a= "completado"%>
+  <% else %>
+       <% a= "no completado"%>
 <% end %>
    <p><%= "#{@todo.description} / #{a}"%></p>
    <%=link_to '<< volver',todos_path%>

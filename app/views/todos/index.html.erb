@@ -1,13 +1,14 @@
 <h1>INDEX</h1>
 
 <div class="card card-body bg-light">
-<%@todo.each do |todo|%>
+<%@todos.each do |todo|%>
 <p> <%=todo.description%> </p>
 <p> <%=todo.completed%> </p>
 
 <p><%=link_to 'show', todo%></p>
 <p><%=link_to 'edit', edit_todo_path(todo)%></p>
 <p><%=link_to 'delete', todo, method: :delete, data: {confirm: 'estas seguro que quieres eliminarlo?'}%></p>
+<p><%= link_to 'completed',completed_todo_path(todo)%></p>
 
 
 <%end%>
