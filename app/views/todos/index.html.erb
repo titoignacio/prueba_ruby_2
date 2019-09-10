@@ -7,6 +7,8 @@
 
 <p><%=link_to 'show', todo%></p>
 <p><%=link_to 'edit', edit_todo_path(todo)%></p>
+<p><%=link_to 'delete', todo, method: :delete, data: {confirm: 'estas seguro que quieres eliminarlo?'}%></p>
+
 
 <%end%>
 </div>
