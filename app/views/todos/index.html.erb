@@ -1,0 +1,13 @@
+<h1>INDEX</h1>
+
+<div class="card card-body bg-light">
+<%@todo.each do |todo|%>
+<p> <%=todo.description%> </p>
+<p> <%=todo.completed%> </p>
+
+<p><%=link_to 'show', todo%></p>
+<p><%=link_to 'edit', edit_todo_path(todo)%></p>
+
+<%end%>
+</div>
+<p> <%=link_to "crear", todos_new_path%> </p>
